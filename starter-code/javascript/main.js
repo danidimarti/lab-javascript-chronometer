@@ -34,14 +34,18 @@ function clearSplits() {
 }
 
 function setStopBtn() {
-
+btnLeft.className = "btn stop";
+btnLeft.innerHTML = "STOP";
 }
 
 function setSplitBtn() {
-
+btnRight.className = "btn split";
+btnRight.innerHTML = "SPLIT"
 }
 
 function setStartBtn() {
+btnLeft.className = "btn start";
+btnLeft.innerHTML = "START"
 
 }
 
@@ -51,8 +55,10 @@ function setResetBtn() {
 
 // Start/Stop Button
 btnLeft.addEventListener('click', function () {
+   chronometer.startClick()  
+   setStopBtn()
 
-});
+   });
 
 // Reset/Split Button
 btnRight.addEventListener('click', function () {
